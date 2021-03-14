@@ -1,0 +1,4 @@
+---
+- name: End point host port check 
+  wait_for: host={{ end_point_host }} port={{ end_point_host_port  }} timeout=3
+- debug: msg="{{ end_point_host }} {{ end_point_host_port }} port is open"

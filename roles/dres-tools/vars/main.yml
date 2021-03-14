@@ -1,0 +1,18 @@
+---
+#put  user name you would like to proces
+users: 'slawomir'
+
+#for how long password should be valid
+user_password_valid_time: 9999
+
+# put here end point host you would like test port is open or not. If DNS not available , put ip address
+end_point_host: some_url_or_ip_address 
+
+# put here port you would like to test on end point
+end_point_host_port: 8081
+
+# please choose which task you would like to run yes/no
+user_manage: no 
+check_haproxy: no
+test_remote: no
+user_status: yes

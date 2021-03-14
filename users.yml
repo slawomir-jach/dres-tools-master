@@ -1,0 +1,14 @@
+---
+- name: Check users status
+  hosts: all
+  gather_facts: yes
+  tasks:
+  - raw: "chage -l autom802 |grep -C 0 Maximum"
+    register: expiry_unexpired
+  - debug:
+      msg: "{{ expiry_unexpired.stdout }}"
+
+#- name: Starting at Ansible 2.6 remove expiry time
+#    user:
+#      name: autom802
+#      expires: 9999

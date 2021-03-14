@@ -1,0 +1,16 @@
+---
+- name: Set password expire time
+  include_tasks: user_manage.yml
+  when: user_manage
+
+- name: Check haproxy is working
+  include_tasks: check_haproxy.yml
+  when: check_haproxy
+
+- name: Check remote host port
+  include_tasks: test_remote_port.yml
+  when: test_remote
+
+- name: Check user account status
+  include_tasks: user_status.yml
+  when: user_status
